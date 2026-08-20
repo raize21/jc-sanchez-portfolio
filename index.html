@@ -914,36 +914,482 @@ footer .fmono{font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(
   </div>
 </section>
 
-<section id="contact" style="border-top:none;">
-  <div class="wrap cta-section">
-    <div class="eyebrow" style="justify-content:center;">Let's talk</div>
-    <h2 class="reveal">Ready to hand something off your plate?</h2>
-    <p class="sub reveal">Usually replies within a couple of hours during Philippine business hours. Pick whichever's easiest — it all reaches the same desk.</p>
+<section id="contact" class="contact-section">
+  <div class="wrap">
 
+    <div class="contact-hero reveal">
+
+      <!-- PROFILE PHOTO -->
+      <div class="contact-photo">
+        <img
+          src="profile1.jpg"
+          alt="John Carlo Sanchez"
+        >
+
+        <div class="photo-label">
+          <span>AVAILABLE</span>
+          <span>●</span>
+        </div>
+      </div>
+
+
+      <!-- CONTACT INTRO -->
+      <div class="contact-intro">
+
+        <div class="eyebrow">Let's talk</div>
+
+        <h2>
+          Ready to hand something
+          <em>off your plate?</em>
+        </h2>
+
+        <p class="contact-sub">
+          Usually replies within a couple of hours during Philippine
+          business hours. Pick whichever's easiest — it all reaches
+          the same desk.
+        </p>
+
+        <div class="contact-location">
+          <span class="location-dot"></span>
+          Based in the Philippines · Available remotely
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- CONTACT OPTIONS -->
     <div class="contact-grid reveal">
-      <a href="https://facebook.com/" target="_blank" rel="noopener" class="contact-card">
-        <span class="contact-arrow">↗</span>
-        <span class="contact-k">Facebook</span>
+
+      <a
+        href="https://facebook.com/"
+        target="_blank"
+        rel="noopener"
+        class="contact-card"
+      >
+        <span class="contact-card-top">
+          <span class="contact-k">Facebook</span>
+          <span class="contact-arrow">↗</span>
+        </span>
+
         <span class="contact-v">Message on FB</span>
       </a>
-      <a href="https://www.linkedin.com/in/jcbsanchez/" target="_blank" rel="noopener" class="contact-card">
-        <span class="contact-arrow">↗</span>
-        <span class="contact-k">LinkedIn</span>
+
+
+      <a
+        href="https://www.linkedin.com/in/jcbsanchez/"
+        target="_blank"
+        rel="noopener"
+        class="contact-card"
+      >
+        <span class="contact-card-top">
+          <span class="contact-k">LinkedIn</span>
+          <span class="contact-arrow">↗</span>
+        </span>
+
         <span class="contact-v">Connect on LinkedIn</span>
       </a>
-      <a href="mailto:jcsanchez0907@gmail.com" class="contact-card">
-        <span class="contact-arrow">↗</span>
-        <span class="contact-k">Email</span>
+
+
+      <a
+        href="mailto:jcsanchez0907@gmail.com"
+        class="contact-card"
+      >
+        <span class="contact-card-top">
+          <span class="contact-k">Email</span>
+          <span class="contact-arrow">↗</span>
+        </span>
+
         <span class="contact-v">jcsanchez0907@gmail.com</span>
       </a>
-      <a href="tel:+639956624763" class="contact-card">
-        <span class="contact-arrow">↗</span>
-        <span class="contact-k">Phone</span>
+
+
+      <a
+        href="tel:+639956624763"
+        class="contact-card"
+      >
+        <span class="contact-card-top">
+          <span class="contact-k">Phone</span>
+          <span class="contact-arrow">↗</span>
+        </span>
+
         <span class="contact-v">+63 995 662 4763</span>
       </a>
+
     </div>
+
   </div>
 </section>
+<style>
+  /* =========================================================
+   CONTACT — PROFILE / CTA
+   ========================================================= */
+
+.contact-section {
+  position: relative;
+  padding: 150px 0 80px;
+  overflow: hidden;
+}
+
+
+/* ---------------------------------------------------------
+   HERO
+   --------------------------------------------------------- */
+.contact-hero {
+  display: grid;
+  grid-template-columns: minmax(340px, .85fr) minmax(0, 1.15fr);
+  min-height: 620px;
+
+  border-top: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
+}
+
+.contact-photo {
+  position: relative;
+  min-height: 620px;
+  overflow: hidden;
+
+  border-right: 1px solid currentColor;
+}
+
+.contact-photo img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: 44% center;
+
+  filter: saturate(.9);
+
+  transition:
+    transform .8s cubic-bezier(.2,.7,.2,1),
+    filter .5s ease;
+}
+
+.contact-hero:hover .contact-photo img {
+  transform: scale(1.015);
+}
+
+
+/* photo status */
+
+.photo-label {
+  position: absolute;
+  left: 25px;
+  bottom: 25px;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 9px 12px;
+
+  background: var(--bg, #111);
+
+  border: 1px solid currentColor;
+
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: .15em;
+}
+
+.photo-label span:last-child {
+  color: #69d391;
+  font-size: 9px;
+}
+
+
+/* ---------------------------------------------------------
+   INTRO
+   --------------------------------------------------------- */
+
+.contact-intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 70px 8vw 70px 8vw;
+}
+
+.contact-intro .eyebrow {
+  margin-bottom: 30px;
+
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+
+  opacity: .5;
+}
+
+
+/* Main heading */
+
+.contact-intro h2 {
+  max-width: 750px;
+
+  margin: 0;
+
+  font-size: clamp(55px, 7vw, 105px);
+  line-height: .84;
+
+  letter-spacing: -.07em;
+}
+
+.contact-intro h2 em {
+  display: block;
+
+  font-style: normal;
+
+  opacity: .42;
+}
+
+
+/* Description */
+
+.contact-sub {
+  max-width: 450px;
+
+  margin: 42px 0 0;
+
+  font-size: 14px;
+  line-height: 1.85;
+
+  opacity: .58;
+}
+
+
+/* Location */
+
+.contact-location {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  margin-top: 35px;
+
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+
+  opacity: .4;
+}
+
+.location-dot {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #69d391;
+}
+
+
+/* ---------------------------------------------------------
+   CONTACT GRID
+   --------------------------------------------------------- */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  border-left: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
+}
+
+
+/* Card */
+
+.contact-card {
+  position: relative;
+
+  min-height: 180px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 25px;
+
+  border-right: 1px solid currentColor;
+
+  color: inherit;
+  text-decoration: none;
+
+  transition:
+    background .35s ease,
+    color .35s ease;
+}
+
+.contact-card:hover {
+  background: currentColor;
+  color: var(--bg, #111);
+}
+
+
+/* Top */
+
+.contact-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contact-k {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+}
+
+.contact-arrow {
+  font-size: 20px;
+  line-height: 1;
+
+  transition:
+    transform .3s ease;
+}
+
+.contact-card:hover .contact-arrow {
+  transform: translate(4px, -4px);
+}
+
+
+/* Value */
+
+.contact-v {
+  display: block;
+
+  font-size: 13px;
+  line-height: 1.4;
+
+  opacity: .55;
+
+  transition: opacity .3s ease;
+}
+
+.contact-card:hover .contact-v {
+  opacity: .8;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .contact-section {
+    padding-top: 110px;
+  }
+
+  .contact-hero {
+    grid-template-columns: 1fr 1fr;
+    min-height: 500px;
+  }
+
+  .contact-photo {
+    min-height: 500px;
+  }
+
+  .contact-intro {
+    padding: 50px;
+  }
+
+  .contact-intro h2 {
+    font-size: clamp(45px, 6vw, 70px);
+  }
+
+  .contact-sub {
+    margin-top: 30px;
+    font-size: 13px;
+  }
+
+  .contact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-card {
+    min-height: 150px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .contact-section {
+    padding: 90px 0 50px;
+  }
+
+  .contact-hero {
+    display: flex;
+    flex-direction: column;
+
+    min-height: auto;
+  }
+
+  .contact-photo {
+    height: 430px;
+    min-height: 0;
+
+    border-right: 0;
+    border-bottom: 1px solid currentColor;
+  }
+
+  .contact-intro {
+    padding: 50px 25px 60px;
+  }
+
+  .contact-intro .eyebrow {
+    margin-bottom: 22px;
+  }
+
+  .contact-intro h2 {
+    font-size: clamp(48px, 14vw, 65px);
+  }
+
+  .contact-sub {
+    margin-top: 30px;
+    font-size: 13px;
+  }
+
+  .contact-location {
+    margin-top: 25px;
+    line-height: 1.5;
+  }
+
+
+  /* contact links */
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-card {
+    min-height: 125px;
+
+    padding: 22px;
+
+    border-right: 0;
+  }
+
+  .contact-v {
+    font-size: 12px;
+  }
+
+}
+
+</style>
 
 <footer>
   <div class="wrap" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; width:100%;">
